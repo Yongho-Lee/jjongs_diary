@@ -2,9 +2,14 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-bg{
+  height:500px;
+  background-image: url("./JJongBackground2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
