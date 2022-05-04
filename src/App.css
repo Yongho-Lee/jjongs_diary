@@ -4,11 +4,11 @@
 
 .main-bg{
   height:500px;
-  background-image: url("./JJongBackground2.jpg");
+  background-image: url("./img/JJongBackground2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+  margin-bottom: 30px;
   
 }
 
