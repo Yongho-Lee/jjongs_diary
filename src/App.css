@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.btn {
+  margin-bottom: 20px;
+  margin-top:5px;
+}
 .main-bg{
   height:500px;
   background-image: url("./img/JJongBackground2.jpg");

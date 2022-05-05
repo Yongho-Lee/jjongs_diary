@@ -3,8 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 function Detail(props) {
+
     let navigate = useNavigate();
     let {id} = useParams();
+
+
     console.log(id+1);
     return(
         <div className="container">
@@ -18,6 +21,7 @@ function Detail(props) {
                 <p>120000원</p>
                 <button className="btn btn-danger">주문하기</button> 
                 <button className="btn" onClick={()=>{navigate(-1)}}>뒤로가기</button>
+
                 </div>
             </div>
 
