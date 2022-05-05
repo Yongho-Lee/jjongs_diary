@@ -8,10 +8,11 @@ import { Routes, Route,useNavigate } from 'react-router-dom';
 import Detail from './component/Detail.js'
 import About from './component/About.js'
 import Event from './component/Event.js'
+import axios from 'axios';
 
 function App() {
 
-  let [datas] = useState(data);
+  let [datas, setDatas] = useState(data);
   let [alrets, setAlrets] = useState(true);  
   let navigate = useNavigate();
   
@@ -53,8 +54,16 @@ function App() {
       <div className="main-bg">        
       </div>
 
-      <button class="btn btn-outline-primary" onClick={()=>{
-        fetch()
+      <button className="btn btn-outline-primary" onClick={()=>{
+        axios.get('https://codingapple1.github.io/shop/data2.json')
+        .then((result)=>{
+          let tmp = [...datas, ...result.data]
+          console.log (tmp)
+          setDatas(tmp)
+        })
+        .catch(()=>{
+          console.log("failed to fetch.")
+        })
       }}> fetch list </button> 
 
       <Routes>
