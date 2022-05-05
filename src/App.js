@@ -15,10 +15,12 @@ function App() {
   let [datas, setDatas] = useState(data);
   let [alrets, setAlrets] = useState(true);  
   let navigate = useNavigate();
-  
+  let [clickFetchNum, setClickFetchNum] = useState(2);
+
   useEffect(()=>{
     setTimeout(()=>{setAlrets(false)}, 2000)  
   }, [])
+
 
 
   return (
@@ -54,21 +56,22 @@ function App() {
       <div className="main-bg">        
       </div>
 
-      <button className="btn btn-outline-primary" onClick={()=>{
-        axios.get('https://codingapple1.github.io/shop/data2.json')
-        .then((result)=>{
-          let tmp = [...datas, ...result.data]
-          console.log (tmp)
-          setDatas(tmp)
-        })
-        .catch(()=>{
-          console.log("failed to fetch.")
-        })
-      }}> fetch list </button> 
 
       <Routes>
         <Route path="/" element={
-        <>
+        <>        
+          <button className="btn btn-outline-primary" onClick={()=>{
+            axios.get('https://codingapple1.github.io/shop/data'+clickFetchNum+'.json')
+            .then((result)=>{
+              let tmp = [...datas, ...result.data]
+              setDatas(tmp)
+              setClickFetchNum(clickFetchNum+1)
+            })
+            .catch(()=>{
+              console.log("failed to fetch.")
+            })
+          }}> fetch list </button> 
+
               <Card datas={datas} />
         </>
         }/>
@@ -89,9 +92,13 @@ function App() {
 
 
 
+
+
     </div>
   );
 }
+
+
 
 function TimeAlret(){
   return(
@@ -130,6 +137,10 @@ function Card(props){
   )
 
 }
+
+
+
+
 
 
 
