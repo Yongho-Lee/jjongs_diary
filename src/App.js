@@ -16,7 +16,7 @@ function App() {
   let navigate = useNavigate();
   
   useEffect(()=>{
-    setTimeout(()=>{setAlrets(false)}, 2000)
+    setTimeout(()=>{setAlrets(false)}, 2000)  
   }, [])
 
 
@@ -24,7 +24,9 @@ function App() {
     <div className="App">
 
       {
-        alrets == true ? <TimeAlret /> : null
+        alrets === true 
+        ? <TimeAlret /> 
+        : null
       }
 
 
@@ -50,6 +52,10 @@ function App() {
 
       <div className="main-bg">        
       </div>
+
+      <button class="btn btn-outline-primary" onClick={()=>{
+        fetch()
+      }}> fetch list </button> 
 
       <Routes>
         <Route path="/" element={
