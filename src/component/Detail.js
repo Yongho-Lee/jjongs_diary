@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { Nav } from 'react-bootstrap'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Detail(props) {
 
@@ -51,19 +51,30 @@ function Detail(props) {
 }
 
 function TabComponent({tab}){
+
+    let [fade, setFade] = useState('');
+
+    useEffect(()=>{
+        let a = setTimeout(()=>{setFade('end')}, 100);
+        return() =>{
+            clearTimeout(a);
+            setFade('');
+        }       
+
+    }, [tab])
     if(tab === 1){
         return(
-            <div> <h4> Information </h4></div>
+            <div className={"start " + fade}> <h4> Information </h4></div>
         )
     }
     else if(tab === 2){
         return(
-            <div> <h4> Reviews </h4></div>
+            <div className={"start " + fade}> <h4> Reviews </h4></div>
         )
     }
     else if(tab === 3){
         return(
-            <div> <h4> Not service yet </h4></div>
+            <div className={"start " + fade}> <h4> Not service yet </h4></div>
         )
        
     }
@@ -73,6 +84,7 @@ function TabComponent({tab}){
         )
 
     }
+
 }
 
 export default Detail;

@@ -6,6 +6,15 @@
   margin-bottom: 20px;
   margin-top:5px;
 }
+
+.start {
+  opacity: 0;
+}
+.end {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
 .main-bg{
   height:500px;
   background-image: url("./img/JJongBackground2.jpg");
