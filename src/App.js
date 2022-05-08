@@ -2,13 +2,15 @@
 
 import './App.css';
 import { Navbar, Container, NavDropdown, Nav, Row, Col } from 'react-bootstrap';
-import data from './data.js'
 import { useState, useEffect } from 'react';
-import { Routes, Route,useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
+import data from './data.js'
+import Card from './component/Card.js'
 import Detail from './component/Detail.js'
 import About from './component/About.js'
 import Event from './component/Event.js'
-import axios from 'axios';
 
 function App() {
 
@@ -89,11 +91,6 @@ function App() {
         </Route>
       </Routes>
 
-
-
-
-
-
     </div>
   );
 }
@@ -107,38 +104,6 @@ function TimeAlret(){
     </>
   )
 }
-
-
-function Card(props){
-  let navigate = useNavigate();
-
-  return(
-    <>
-      <Container>
-      <Row>
-      {
-        props.datas.map(function(a,i){
-          return(
-
-              <Col sm key={i}>
-                <img onClick={() =>{navigate('./detail/'+i)}} src={"https://github.com/Yongho-Lee/jjongs_diary/blob/main/src/img/jjong" + (i +1) +".jpg?raw=true"} width="250px" height="200px" alt={'jjong'+i} />
-                <h4> {props.datas[i].title} </h4>
-                <p> {props.datas[i].content} </p>
-              </Col>            
-
-          )
-        })
-
-      }
-        </Row>
-      </Container>
-    </>
-
-  )
-
-}
-
-
 
 
 

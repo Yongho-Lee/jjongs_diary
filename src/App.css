@@ -8,8 +8,12 @@
 }
 
 .start {
+  text-align: left;
   opacity: 0;
+  margin: 20px;
+  margin-bottom: 100px;
 }
+
 .end {
   opacity: 1;
   transition: opacity 0.5s;

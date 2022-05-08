@@ -8,7 +8,7 @@ function Detail(props) {
 
     let navigate = useNavigate();
     let {id} = useParams();
-    let [tab, setTab] = useState(0);
+    let [tab, setTab] = useState(1);
 
 
     console.log("page id=" + (parseInt(id)+1));
