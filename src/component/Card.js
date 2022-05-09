@@ -1,4 +1,4 @@
-import { Navbar, Container, NavDropdown, Nav, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom'
 
 function Card(props){
