@@ -1,7 +1,9 @@
 //for sending all states in Cart, Redux is used.
 
 import { Table } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
+import store from '../store';
+import { changeCount } from '../store'
 
 function Cart () {
 
@@ -10,7 +12,7 @@ function Cart () {
 
     let product = useSelector(state=>state.product);
     //console.log(product[0])
-
+    let dispatch = useDispatch();
     return (
         <>
         <div>
@@ -25,13 +27,20 @@ function Cart () {
                 </thead>
                 <tbody>
                 {
+                    //return문과 중괄호는 생략 가능함. 
                 product.map(function(a,i){
                     return(
                         <tr>
                         <td>{product[i].id}</td>
                         <td>{product[i].name}</td>
                         <td>{product[i].count}</td>
-                        <td>4</td>
+                        <td>
+                            <button onClick={()=>{
+                                dispatch(changeCount())
+                            }}>
+                                +
+                            </button>
+                        </td>
                     </tr>
                     )
                 })}

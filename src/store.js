@@ -12,10 +12,15 @@ let product = createSlice({
         id: 2,
         name : 'Grey Yordan',
         count : 1
-    }]
-
-
+    }],
+    reducers: {
+        changeCount(state){
+            return state + 1
+        }
+    }
 })
+
+export let { changeCount } = product.actions;
 
 
 export default configureStore({
