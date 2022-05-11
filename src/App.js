@@ -31,7 +31,7 @@ function App() {
 
       {
         alrets === true 
-        ? <TimeAlret /> 
+        ? <TimeAlert /> 
         : null
       }
 
@@ -101,7 +101,7 @@ function App() {
 
 
 
-function TimeAlret(){
+function TimeAlert(){
   return(
     <>
       <div className="alert alert-warning"> 2초 이내 클릭 </div>
