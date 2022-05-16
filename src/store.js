@@ -14,8 +14,11 @@ let product = createSlice({
         count : 1
     }],
     reducers: {
-        changeCount(state, i){
-        state[i.payload.type].count++;
+        // changeCount(state, i){
+        // state[i.payload.type].count++;
+        // }
+        changeCount(state) {
+            state.count += 1;
         }
     }
 })

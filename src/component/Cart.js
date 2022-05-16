@@ -40,6 +40,11 @@ function Cart () {
                             <td>{product[i].name}</td>
                             <td>{product[i].count}</td>
                         <td>
+                            {/* <button onClick={()=>{
+                                dispatch(changeCount({type:i}))
+                            }}>
+                                +
+                            </button> */}
                             <button onClick={()=>{
                                 dispatch(changeCount({type:i}))
                             }}>
