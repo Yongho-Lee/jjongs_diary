@@ -2,7 +2,9 @@
 
 import { Table } from 'react-bootstrap';
 import { useSelector,useDispatch } from 'react-redux';
-import { changeCount, changeName } from '../store';
+import { increaseCount} from '../store/productSlice';
+import { changeName, changeItem } from '../store/userSlice'
+import { Button } from 'react-bootstrap';
 
 
 function Cart () {
@@ -18,10 +20,19 @@ function Cart () {
     return (
         <>
         <div>
-            <p> {user}'s cart</p> <button onClick={()=>{
+            <p> {user.name}'s cart</p> <Button onClick={()=>{
                 dispatch(changeName())
-            }}></button>
+            }}> ? </Button>
+            <p> has {user.item} item(s) in cart</p>
+            <button onClick={()=>{
+                dispatch(changeItem())
+            }}> Item + </button>
+
+            <button onClick={()=>{
+                dispatch(changeItem(10))
+            }}> Item +10 </button>
             <Table>
+
                 <thead>
                     <tr>
                         <th>#</th>
@@ -46,7 +57,7 @@ function Cart () {
                                 +
                             </button> */}
                             <button onClick={()=>{
-                                dispatch(changeCount({type:i}))
+                                dispatch(increaseCount(product[i].id))
                             }}>
                                 +
                             </button>
