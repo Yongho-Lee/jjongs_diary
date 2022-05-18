@@ -2,9 +2,10 @@
 
 import { Table } from 'react-bootstrap';
 import { useSelector,useDispatch } from 'react-redux';
+import { Button } from 'react-bootstrap';
+
 import { increaseCount} from '../store/productSlice';
 import { changeName, changeItem } from '../store/userSlice'
-import { Button } from 'react-bootstrap';
 
 
 function Cart () {
@@ -47,7 +48,7 @@ function Cart () {
                 product.map(function(a,i){
                     return(
                         <tr key={i}>
-                            <td >{product[i].id}</td>
+                            <td >{i+1}</td>
                             <td>{product[i].name}</td>
                             <td>{product[i].count}</td>
                         <td>

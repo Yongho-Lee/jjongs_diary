@@ -4,14 +4,22 @@ import { useParams } from 'react-router-dom';
 import { Nav } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 
+import { useDispatch } from 'react-redux';
+import { addCartList } from '../store/productSlice';
+
+
+
 function Detail(props) {
 
     let navigate = useNavigate();
     let {id} = useParams();
     let [tab, setTab] = useState(1);
 
+    let dispatch = useDispatch();
 
-    console.log("page id=" + (parseInt(id)+1));
+
+    //console.log("page id=" + (parseInt(id)+1));
+    // check page number
     return(
         <div className="container">
             <div className="row">
@@ -22,7 +30,10 @@ function Detail(props) {
                 <h4 className="pt-5">{props.datas[id].title}</h4>
                 <p>{props.datas[id].content}</p>
                 <p>120000원</p>
-                <button className="btn btn-danger">주문하기</button> 
+                <button className="btn btn-danger" onClick={()=>{
+                    //navigate('/cart');
+                    dispatch(addCartList(props.datas[id]));
+                    }}>주문하기</button> 
                 <button className="btn" onClick={()=>{navigate(-1)}}>뒤로가기</button>
                 </div>
             </div>
