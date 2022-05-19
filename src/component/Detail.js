@@ -17,10 +17,21 @@ function Detail(props) {
 
     let dispatch = useDispatch();
 
+    useEffect(()=>{
 
+        let bWatched = localStorage.getItem('watched')
+        let nextWatched = JSON.parse(bWatched)
+        nextWatched.push(props.datas[id].id)
+        localStorage.setItem(
+            'watched', JSON.stringify( nextWatched )
+        );
+
+    })
     //console.log("page id=" + (parseInt(id)+1));
     // check page number
     return(
+        <>
+
         <div className="container">
             <div className="row">
                 <div className="col-md-6">
@@ -57,7 +68,7 @@ function Detail(props) {
 
         </div> 
 
-
+        </>
     )
 }
 
@@ -97,5 +108,7 @@ function TabComponent({tab}){
     }
 
 }
+
+
 
 export default Detail;
