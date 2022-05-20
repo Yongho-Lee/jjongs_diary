@@ -3,7 +3,7 @@
 import { Table } from 'react-bootstrap';
 import { useSelector,useDispatch } from 'react-redux';
 import { Button } from 'react-bootstrap';
-
+import { memo, useState } from 'react';
 import { increaseCount} from '../store/productSlice';
 import { changeName, changeItem } from '../store/userSlice'
 
@@ -17,6 +17,9 @@ function Cart () {
     let user = useSelector(state=>state.user);
     //console.log(product[0])
     let dispatch = useDispatch();
+
+    //memo test count
+    let [count2, setCount] = useState(0)
 
     return (
         <>
@@ -70,12 +73,17 @@ function Cart () {
             </Table>
         </div>
 
-
+        {/* memo render test */}
+        <Child></Child>
+        <button onClick={() => { setCount(count2+1)}}>+</button>
         </>
     )
 
 }
 
-
+let Child = memo( function () {
+    console.log("rendered")
+    return <div> memo render test </div>
+})
 
 export default Cart;   
