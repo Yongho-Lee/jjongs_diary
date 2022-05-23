@@ -110,7 +110,7 @@ function App() {
 function TimeAlert(){
   return(
     <>
-      <div className="alert alert-warning"> 2초 이내 클릭 </div>
+      <div className="alert alert-warning"> Learning React </div>
     </>
   )
 }
