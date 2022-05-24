@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.29abc9ed.css",
+    "main.js": "/static/js/main.a0ffe87e.js",
+    "static/js/787.35bb49b7.chunk.js": "/static/js/787.35bb49b7.chunk.js",
+    "static/media/JJongBackground2.jpg": "/static/media/JJongBackground2.f3128ffe0a5464ea4b17.jpg",
+    "index.html": "/index.html",
+    "main.29abc9ed.css.map": "/static/css/main.29abc9ed.css.map",
+    "main.a0ffe87e.js.map": "/static/js/main.a0ffe87e.js.map",
+    "787.35bb49b7.chunk.js.map": "/static/js/787.35bb49b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29abc9ed.css",
+    "static/js/main.a0ffe87e.js"
+  ]
+}
