@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/jjongs_diary/static/css/main.f435c001.css",
-    "main.js": "/jjongs_diary/static/js/main.d3522097.js",
+    "main.js": "/jjongs_diary/static/js/main.ecabde64.js",
     "static/js/787.35bb49b7.chunk.js": "/jjongs_diary/static/js/787.35bb49b7.chunk.js",
     "static/media/JJongBackground2.jpg": "/jjongs_diary/static/media/JJongBackground2.f3128ffe0a5464ea4b17.jpg",
     "index.html": "/jjongs_diary/index.html",
     "main.f435c001.css.map": "/jjongs_diary/static/css/main.f435c001.css.map",
-    "main.d3522097.js.map": "/jjongs_diary/static/js/main.d3522097.js.map",
+    "main.ecabde64.js.map": "/jjongs_diary/static/js/main.ecabde64.js.map",
     "787.35bb49b7.chunk.js.map": "/jjongs_diary/static/js/787.35bb49b7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f435c001.css",
-    "static/js/main.d3522097.js"
+    "static/js/main.ecabde64.js"
   ]
 }
