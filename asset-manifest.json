@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.29abc9ed.css",
-    "main.js": "/static/js/main.2550a145.js",
-    "static/js/787.35bb49b7.chunk.js": "/static/js/787.35bb49b7.chunk.js",
-    "static/media/JJongBackground2.jpg": "/static/media/JJongBackground2.f3128ffe0a5464ea4b17.jpg",
-    "index.html": "/index.html",
-    "main.29abc9ed.css.map": "/static/css/main.29abc9ed.css.map",
-    "main.2550a145.js.map": "/static/js/main.2550a145.js.map",
-    "787.35bb49b7.chunk.js.map": "/static/js/787.35bb49b7.chunk.js.map"
+    "main.css": "/jjongs_diary/static/css/main.f435c001.css",
+    "main.js": "/jjongs_diary/static/js/main.d3522097.js",
+    "static/js/787.35bb49b7.chunk.js": "/jjongs_diary/static/js/787.35bb49b7.chunk.js",
+    "static/media/JJongBackground2.jpg": "/jjongs_diary/static/media/JJongBackground2.f3128ffe0a5464ea4b17.jpg",
+    "index.html": "/jjongs_diary/index.html",
+    "main.f435c001.css.map": "/jjongs_diary/static/css/main.f435c001.css.map",
+    "main.d3522097.js.map": "/jjongs_diary/static/js/main.d3522097.js.map",
+    "787.35bb49b7.chunk.js.map": "/jjongs_diary/static/js/787.35bb49b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29abc9ed.css",
-    "static/js/main.2550a145.js"
+    "static/css/main.f435c001.css",
+    "static/js/main.d3522097.js"
   ]
 }
