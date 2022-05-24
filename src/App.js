@@ -22,9 +22,9 @@ function App() {
 
   // useEffect(()=>{   
   //   let watched = localStorage.getItem('watched')
-  //   let watched2 = JSON.parse(watched);
-  //   if(watched2[0] === false){
-  //     localStorage.setItem('watched', JSON.stringify( [] ));
+  //   let watched = JSON.parse(watched);
+  //   if(watched[0] === null){
+  //     localStorage.setItem('watched', JSON.stringify(watched));
   //   }
 
   // }, [])
