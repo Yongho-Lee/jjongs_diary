@@ -20,6 +20,16 @@ function App() {
   let navigate = useNavigate();
   let [clickFetchNum, setClickFetchNum] = useState(2);
 
+  // useEffect(()=>{   
+  //   let watched = localStorage.getItem('watched')
+  //   let watched2 = JSON.parse(watched);
+  //   if(watched2[0] === false){
+  //     localStorage.setItem('watched', JSON.stringify( [] ));
+  //   }
+
+  // }, [])
+
+
 
   return (
     <div className="App">
