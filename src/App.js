@@ -16,19 +16,9 @@ import Cart from './component/Cart.js'
 function App() {
 
   let [datas, setDatas] = useState(data);
-  let [alrets, setAlrets] = useState(true);  
+  let [alrets] = useState(true);  
   let navigate = useNavigate();
   let [clickFetchNum, setClickFetchNum] = useState(2);
-
-  useEffect(()=>{
-    setTimeout(()=>{setAlrets(false)}, 2000);
-    let watched = localStorage.getItem('watched')
-    let watched2 = JSON.parse(watched);
-    if(watched2[0] === false){
-      localStorage.setItem('watched', JSON.stringify( [] ));
-    }
-
-  }, [])
 
 
 
