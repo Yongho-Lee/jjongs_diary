@@ -40,6 +40,7 @@ function App() {
         : null
       }
 
+      {/* Navbar */}
 
       <Navbar bg="light" expand="lg">
         <Container>
@@ -63,10 +64,12 @@ function App() {
 
 
 
+      {/* Routes */}
 
       <Routes>
         <Route path="/" element={
-        <>        
+        <>   
+          {/* Jumbo      */}
           <div className="main-bg">        
           </div>
           <button className="btn btn-outline-primary" onClick={()=>{
