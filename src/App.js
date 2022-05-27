@@ -50,7 +50,7 @@ function App() {
               <Nav.Link onClick={()=>{ navigate('/detail/0')}}>Detail</Nav.Link>
               <Nav.Link onClick={()=>{ navigate('/about')}}>About</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item onClick={()=>{ navigate('/event')}}>Event</NavDropdown.Item>
+                <NavDropdown.Item onClick={()=>{ navigate('/event/two')}}>Event</NavDropdown.Item>
                 <NavDropdown.Item  onClick={()=>{ navigate('/cart')}}> Cart </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                 <NavDropdown.Divider />
@@ -84,6 +84,7 @@ function App() {
               <Card datas={datas} />
         </>
         }/>
+
         <Route path="/detail/:id" element={<Detail datas={datas} />}/>
         <Route path="*" element={<div> 404 error </div>} />
 
