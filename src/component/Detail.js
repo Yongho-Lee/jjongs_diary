@@ -72,6 +72,9 @@ function Detail(props) {
     )
 }
 
+// 아래에서 props 문법 봐두면 좋음.
+// (props) 전송이 아니라 props의 이름인 {tab} 을 사용해서 파라미터 전송받음
+// props 가 여러개면 {tab, props2, props3...} 으로 사용가능.
 function TabComponent({tab}){
 
     let [fade, setFade] = useState('');
